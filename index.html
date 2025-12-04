@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Business Card | Imran Hosain</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font for professional look -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        .icon-link:hover .icon-box {
+            background-color: #3b82f6; /* Blue 500 */
+            color: white;
+            transform: translateY(-2px);
+        }
+    </style>
+    <!-- Load Lucide icons for clean vector icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-sm bg-white rounded-xl card-shadow overflow-hidden">
+
+        <!-- Header Section -->
+        <header class="bg-blue-600 p-8 text-white text-center rounded-t-xl">
+            <!-- Profile Image Container -->
+            <div class="w-24 h-24 mx-auto mb-4 border-4 border-blue-400 rounded-full overflow-hidden">
+                <!-- Profile Image from Base64 Data URI -->
+                <img src="https://pbs.twimg.com/profile_images/1390699973818216451/RjD3ZwtT_400x400.jpg" alt="Profile Image" class="w-full h-full object-cover"/>
+            </div>
+            <h1 class="text-3xl font-bold">Imran Hosain</h1>
+            <p class="text-blue-200 mt-1"> Industrial Engineer</p>
+            <p class="text-blue-300 text-sm mt-0.5">Textile Industry</p>
+        </header>
+
+        <!-- Contact Details Display -->
+        <section class="p-6 pt-4 border-b border-gray-100">
+            <h2 class="text-lg font-semibold text-gray-800 mb-3">Contact Details</h2>
+            <div class="space-y-2 text-sm text-gray-700">
+                <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail mr-3 text-purple-500"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span>info.imranhosain@yahoo.com</span>
+                </div>
+                <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-call mr-3 text-indigo-500"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 3.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M14.05 2a.2 2 0 0 1 .3.3L15 4l.35 1.55a.2.2 0 0 1-.09.2l-.5.5a.2.2 0 0 0-.01.27l1.1 1.1a.2.2 0 0 0 .27-.01l.5-.5a.2.2 0 0 1 .2-.09L19 9.7l2 1.5a.2.2 0 0 1 .3.3"/></svg>
+                    <span>Work: +8801715195081</span>
+                </div>
+                <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone mr-3 text-indigo-500"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                    <span>Mobile: +8801318778325</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Main Contact Actions -->
+        <section class="p-6 pt-4">
+            <h2 class="text-lg font-semibold text-gray-800 mb-3 border-b pb-2">Quick Actions</h2>
+            <div class="grid grid-cols-3 gap-3">
+                <a id="call-btn" href="tel:+8801715195081" class="flex flex-col items-center p-3 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 rounded-lg transition duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 3.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span class="text-xs font-medium mt-1">Call Work</span>
+                </a>
+                <a id="email-btn" href="mailto:info.imranhosain@yahoo.com" class="flex flex-col items-center p-3 bg-purple-50 hover:bg-purple-100 text-purple-700 rounded-lg transition duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span class="text-xs font-medium mt-1">Email</span>
+                </a>
+                <button id="save-contact-btn" class="flex flex-col items-center p-3 bg-green-50 hover:bg-green-100 text-green-700 rounded-lg transition duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-plus"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="16" x2="22" y1="11" y2="11"/></svg>
+                    <span class="text-xs font-medium mt-1">Save</span>
+                </button>
+            </div>
+            <!-- Message box for save confirmation -->
+            <div id="message-box" class="mt-4 hidden p-3 text-sm rounded-lg text-green-800 bg-green-100" role="alert">
+                Contact card downloaded successfully!
+            </div>
+        </section>
+
+        <!-- Social Media Links -->
+        <section class="p-6 border-t border-gray-100">
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">Connect with Me</h2>
+            <div class="grid grid-cols-4 gap-4">
+                <!-- LinkedIn -->
+                <a href="https://bd.linkedin.com/in/textimran" target="_blank" class="icon-link flex flex-col items-center transition duration-200">
+                    <div class="icon-box w-12 h-12 flex items-center justify-center bg-gray-100 text-gray-600 rounded-full transition duration-200">
+                        <!-- LinkedIn Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    </div>
+                    <span class="text-xs mt-1 text-gray-500">LinkedIn</span>
+                </a>
+
+                <!-- Facebook (Replaces GitHub) -->
+                <a href="https://facebook.com/@text.imran" target="_blank" class="icon-link flex flex-col items-center transition duration-200">
+                    <div class="icon-box w-12 h-12 flex items-center justify-center bg-gray-100 text-gray-600 rounded-full transition duration-200">
+                        <!-- Custom Facebook Icon (Lucide doesn't have a standard one, using a generic one with color hint) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle text-blue-600"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                    </div>
+                    <span class="text-xs mt-1 text-gray-500">Facebook</span>
+                </a>
+
+                <!-- YouTube (Replaces Twitter) -->
+                <a href="https://www.youtube.com/channel/UCFFvjh3lF-8Mpvv7kCdUqPA" target="_blank" class="icon-link flex flex-col items-center transition duration-200">
+                    <div class="icon-box w-12 h-12 flex items-center justify-center bg-gray-100 text-gray-600 rounded-full transition duration-200">
+                        <!-- YouTube Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube text-red-600"><path d="M2.5 17a24.1 24.1 0 0 1 0-10C2.5 4 4 2.5 6.5 2.5h11C20 2.5 21.5 4 21.5 6.5a24.1 24.1 0 0 1 0 10c0 2.5-1.5 4-4 4h-11C4 21.5 2.5 20 2.5 17z"/><path d="m10 9 5 3-5 3z"/></svg>
+                    </div>
+                    <span class="text-xs mt-1 text-gray-500">YouTube</span>
+                </a>
+
+                <!-- Website/Portfolio -->
+                <a href="https://heylink.me/Textimran/" target="_blank" class="icon-link flex flex-col items-center transition duration-200">
+                    <div class="icon-box w-12 h-12 flex items-center justify-center bg-gray-100 text-gray-600 rounded-full transition duration-200">
+                        <!-- Globe Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 0 4 10a15.3 15.3 0 0 0-4 10a15.3 15.3 0 0 0-4-10a15.3 15.3 0 0 0 4-10z"/><path d="M2 12h20"/></svg>
+                    </div>
+                    <span class="text-xs mt-1 text-gray-500">Website</span>
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Define contact details - UPDATED with new social links
+        const contactDetails = {
+            firstName: 'Imran',
+            lastName: 'Hosain',
+            title: 'Industrial Engineer',
+            company: 'Textile Industry',
+            phoneWork: '+8801715195081',
+            phoneMobile: '+8801318778325',
+            email: 'info.imranhosain@yahoo.com',
+            website: 'https://heylink.me/Textimran/',
+            linkedIn: 'https://bd.linkedin.com/in/textimran',
+            facebook: 'https://facebook.com/@text.imran',
+            youtube: 'https://www.youtube.com/channel/UCFFvjh3lF-8Mpvv7kCdUqPA',
+        };
+
+        // Helper function to show and hide the message box
+        function showConfirmation(message, duration = 3000) {
+            const msgBox = document.getElementById('message-box');
+            msgBox.innerHTML = message;
+            msgBox.classList.remove('hidden');
+            setTimeout(() => {
+                msgBox.classList.add('hidden');
+            }, duration);
+        }
+
+        // --- VCard Generation Logic ---
+        document.getElementById('save-contact-btn').addEventListener('click', () => {
+            const { firstName, lastName, title, company, phoneWork, phoneMobile, email, website, linkedIn, facebook, youtube } = contactDetails;
+            const fullName = `${firstName} ${lastName}`;
+
+            // vCard format version 4.0
+            const vCardData = `BEGIN:VCARD
+VERSION:4.0
+FN:${fullName}
+N:${lastName};${firstName};;;
+ORG:${company}
+TITLE:${title}
+TEL;TYPE=WORK,VOICE:${phoneWork}
+TEL;TYPE=CELL,VOICE:${phoneMobile}
+EMAIL;TYPE=WORK:${email}
+URL;TYPE=Website:${website}
+X-SOCIAL-PROFILE;TYPE=LinkedIn:${linkedIn}
+X-SOCIAL-PROFILE;TYPE=Facebook:${facebook}
+X-SOCIAL-PROFILE;TYPE=YouTube:${youtube}
+END:VCARD`;
+
+            try {
+                // 1. Attempt File Download (Standard vCard mechanism for real NFC usage)
+                const blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8' });
+
+                // Use the FileSaver API for robust file creation (if available, though typically blocked in sandboxes)
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${firstName}_${lastName}_Contact.vcf`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url); 
+                
+                showConfirmation('Contact card downloaded successfully!', 3000);
+
+            } catch (error) {
+                // 2. Fallback to Clipboard Copy for sandbox/restricted environments
+                console.warn("VCard download failed (likely restricted by preview sandbox). Attempting clipboard copy.");
+                
+                const textarea = document.createElement('textarea');
+                textarea.value = vCardData;
+                // Position off-screen
+                textarea.style.position = 'fixed';
+                textarea.style.opacity = '0';
+                document.body.appendChild(textarea);
+                textarea.select();
+                
+                try {
+                    document.execCommand('copy');
+                    showConfirmation('VCard data copied to clipboard! (Download blocked in preview)', 5000);
+                } catch (copyError) {
+                    showConfirmation('Could not save or copy VCard data.', 5000);
+                    console.error("Clipboard copy failed:", copyError);
+                } finally {
+                    document.body.removeChild(textarea);
+                }
+            }
+        });
+
+        // Ensure the layout centers on load and is responsive
+        window.addEventListener('load', () => {
+            // Update quick action links to use the primary work phone and email
+            document.getElementById('call-btn').href = 'tel:' + contactDetails.phoneWork;
+            document.getElementById('email-btn').href = 'mailto:' + contactDetails.email;
+            console.log("Digital business card loaded and ready.");
+        });
+    </script>
+</body>
+</html>
